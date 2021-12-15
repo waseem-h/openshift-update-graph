@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A visual representation of the possible OpenShift upgrade paths.">
+    <meta name="description" content="A visual representation of the possible OKD upgrade paths.">
 
-    <title>OpenShift Update Graph</title>
+    <title>OKD Update Graph</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
@@ -400,7 +400,8 @@
         set_info();
 
         $.ajax({
-            url: "streams/" + stream + ".json",
+            url: "https://amd64.origin.releases.ci.openshift.org/graph",
+            //url: "streams/" + stream + ".json",
             accepts: {
                 json: "application/json",
             },
@@ -494,7 +495,8 @@
             load(s);
         });
     });
-    update_streams();
+    //update_streams();
+    load("okd");
 
 </script>
 
