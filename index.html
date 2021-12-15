@@ -400,8 +400,7 @@
         set_info();
 
         $.ajax({
-            url: "https://amd64.origin.releases.ci.openshift.org/graph",
-            //url: "streams/" + stream + ".json",
+            url: "streams/" + stream + ".json",
             accepts: {
                 json: "application/json",
             },
@@ -495,8 +494,8 @@
             load(s);
         });
     });
-    //update_streams();
-    load("okd");
+    update_streams();
+    //load("okd");
 
 </script>
 
